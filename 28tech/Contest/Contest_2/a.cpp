@@ -1,3 +1,20 @@
+/*Ở bài trước chắc bạn cũng đã search google được công thức tổng tự nhiên liên tiếp từ 1 tới N, bây giờ bạn hãy dùng kiến thức đó để giải quyết bài toán sau : Cho số nguyên không âm N, hãy tính các bội số của 28 mà nhỏ hơn hoặc bằng N.
+Đầu vào
+
+Số nguyên không âm N
+Giới hạn
+
+0<=N<=10^8
+Đầu ra
+
+In ra đáp án của bài toán
+Ví dụ :
+Input 01
+60
+Output 01
+84
+*/
+
 /**
  *    Author: Phan Duc Phuc
  *    Created: 20.04.2024 08:05:38
