@@ -1,9 +1,9 @@
 /**
  *    Author: Phan Duc Phuc
- *    Created: 20.04.2024 08:05:38
+ *    Created: 20.04.2024 08:11:15
 **/
 #include <bits/stdc++.h>
-//#pragma GCC target("popcnt,lzcnt,bmi,bmi2,abm")
+#pragma GCC target("popcnt,lzcnt,bmi,bmi2,abm")
 
 using namespace std;
 
@@ -41,17 +41,27 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define REP(i,a,b) for(int i = (a) ;i < (b);++i)
 #define file(NAME) if (fopen(NAME".inp","r")){ freopen(NAME".inp","r",stdin);freopen(NAME".out","w",stdout);}
 
-int n;
+int n,q;
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-	cin >> n;
-	long long sum = 0;
-	for(int i = 28;i <= n;i+= 28){
-		sum += i;
+    cout.tie(0);
+	cin >> n >> q;
+	vector<vector<string>> v(n + 1);
+	for(int i = 1;i <= n;i++){
+		int tt;cin >> tt;
+		v[i].resize(tt + 1);
+		for(int j = 1;j <= tt;j++){
+			cin >> v[i][j];
+		}
 	}
-	cout << sum;
-    cerr << "Time: " << TIME << "s\n";
+	while(q--){
+		int x,y;
+		cin >> x >> y;
+		cout << v[x][y] << '\n';
+	}
+    //cerr << "Time: " << TIME << "s\n";
     return (0 ^ 0);
 }
+

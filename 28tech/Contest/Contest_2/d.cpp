@@ -1,6 +1,6 @@
 /**
  *    Author: Phan Duc Phuc
- *    Created: 20.04.2024 08:05:38
+ *    Created: 20.04.2024 10:43:35
 **/
 #include <bits/stdc++.h>
 //#pragma GCC target("popcnt,lzcnt,bmi,bmi2,abm")
@@ -28,6 +28,7 @@ void __print(const T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ 
 void _print() {cerr << "]\n";}
 template <typename T, typename... V>
 void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
+
 #ifndef ONLINE_OJUNGE
 #define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
 #else
@@ -41,17 +42,34 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define REP(i,a,b) for(int i = (a) ;i < (b);++i)
 #define file(NAME) if (fopen(NAME".inp","r")){ freopen(NAME".inp","r",stdin);freopen(NAME".out","w",stdout);}
 
-int n;
+long long gt(int n){
+    long long ans = 1;
+    for(long long i = 1; i <= n;i++){
+        ans *= i;
+    }
+    return ans;
+}
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-	cin >> n;
-	long long sum = 0;
-	for(int i = 28;i <= n;i+= 28){
-		sum += i;
-	}
-	cout << sum;
+    int tc;
+    cin >> tc;
+    while(tc--){
+        int n,b,t,c;
+        cin >> n >> b >> t >> c;
+        long long res = 0;
+        for(int x = b;x <= n;x++){ /// x
+            for(int y = t;y <= n - x;y++){ /// y
+                int z = n - x - y; // z
+                if (z >= c){
+                    res += gt(n) / (gt(x) * gt(y) * gt(z));
+                }
+            }
+        }
+        cout << res << '\n';
+    }
     cerr << "Time: " << TIME << "s\n";
     return (0 ^ 0);
 }
+
