@@ -1,26 +1,42 @@
-/*Cho 2 số N và M, hãy tìm số dư khi chia N cho M. Để tính số dư của 2 số N và M, trong trường hợp N là 1 số nguyên lớn, ta có thể dùng kiến thức toán học sau.
+/*28Tech rất thích BTC và bây giờ anh ta nhờ bạn giúp 1 bài toán, nếu làm đúng bạn sẽ nhận được 1 BTC tương đương khoảng 64K đô la tại tháng 4/2024. Bài toán như sau : Cho xâu S có độ dài N chỉ bao gồm 3 chữ cái là B, T, C trong đó có ít nhất b chữ *B, *ít nhất t chữ T, ít nhất c chữ C, bạn hãy xác định có thể tồn tại bao nhiêu xâu S.
 
-Bạn có N = 12345 và M = 3, bạn có thể duyệt từng chữ số của N từ trái qua phải và duy trì số dư r = 0 ban đầu, khi gặp số 1, r = r * 10 + 1, sau đó lấy r % 3 = 1, khi gặp 2, r = r * 10 + 2 = 12, r % 3 = 0,... tương tự như vậy cho tới khi gặp số cuối cùng của N, giá trị của r khi đó chính là số dư khi chia N cho M.
--Đầu vào
+Gợi ý : Dùng vòng for lồng nhau để xét được mọi cặp thỏa mãn phương trình x + y + z = N với x >= b, y >= t và z >= c.
 
-+Dòng đầu tiên là số nguyên dương N.
+Bài này các bạn sử dụng kiến thức về Multinomial Coefficient. Ví dụ bài toán là cho từ mississippi, hỏi có bao nhiêu từ khác nhau có thể tạo thành bằng cách sắp đặt lại các kí tự trong từ này. Nó tương tự như đếm số cách chia n phần tử thành các tập có k1, k2, k3…km phần tử.
 
-+Dòng thứ 2 là số nguyên dương M.
--Giới hạn
+Ví dụ N = 4, b = 1, t = 1, c = 1 thì có tất cả 36 xâu thỏa mãn đó chính là b = 2, t = 1, c = 1 có 4! / (2! * 1! * 1!) = 12 cách b = 1, t = 2, c = 1 có 4! / (2! * 1! * 1!) = 12 cách b = 1, t = 1, c = 2 có 4! / (2! * 1! * 1!) = 12 cách
+Đầu vào
 
-+N có không quá 1000 chữ số
+Dòng 1 là T : số test case
 
-+M là 1 số nguyên 64 bit.
--Đầu ra
+T dòng tiếp theo mỗi dòng là 1 test gồm 4 số N, b, t, c
+Giới hạn
 
-In ra kết quả của bài toán
+1<=T<=1000
+
+1<=N<=100
+
+1<=b,t,c<=N
+Đầu ra
+
+In ra kết quả của mỗi test trên từng dòng
 Ví dụ :
 Input 01
-33067946071531150754233004290758406156224088702123385775727721812560692728127018053118203890080097807349737445483656674337750559490463284882515284188690875033135649896188928054291493979903124818899453052034828440852665076293856223903153549522293752626469246456263469220701548339620150079748958035285278459874425510146423114651458922315382153363867418189427062506833837102630904319972984364408143264207263924148697330179177840468429040754651164286732641405984220989893094158917765142342992431463840820570772383338073889397592800118784783700396465644597065301244994051135101466785516990398581
-9999999999998156
+
+5
+15 4 2 1
+15 6 5 3
+17 3 1 7
+17 1 1 11
+16 6 1 6
+
 Output 01
 
-7481318352255865
+11043461
+1411410
+37925606
+990624
+5102240
 
 */
 /**
