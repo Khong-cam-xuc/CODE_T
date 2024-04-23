@@ -9,7 +9,7 @@
 ### Bước 2:
 - Bạn vào file 'sublime-build' của bạn
 - Sau đó bạn thêm '-I{Đường dẫn của folder của file debug.h}' vào trong shell_cmd
-<img src="https://up-anh.vi-vn.vn/img/1713850153_6351343c4de4afe0b371e81e2630a95c.">
+<img src="https://i.imgur.com/TJQ5KEF.png">
 ### Bước 3: 
 - Sau đó bạn chỉ cần là thêm:
 '''
