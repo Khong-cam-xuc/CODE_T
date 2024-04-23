@@ -16,14 +16,15 @@
 ### Bước 3: 
 - Sau đó bạn chỉ cần là thêm:
 
-'''
+```
 #ifndef ONLINE_JUNGE
 #include "debug.h"
 #else
 #define debug(x...)
 #endif
-'''
+```
 vào rồi sử dụng bình thường;
+
 <img src="https://i.imgur.com/IbLsAQt.png">
 
 ## Nguồn: 
