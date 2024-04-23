@@ -4,7 +4,7 @@
 
 ### Bước 1:
 - Đầu tiên bạn cần phải bạn tạo file debug.h đặt ở folder tùy ý bạn và bạn cần lưu lại đường dẫn của folder này
-<img src="https://i.imgur.com/HPDkHvn.png">
+<img src="https://i.imgur.com/egikySE.png">
 
 - Sao chép file debug.h trong github [Cài Đặt](https://github.com/Khong-cam-xuc/CODE_T/tree/main/C%C3%A0i%20%C4%90%E1%BA%B7t) rồi copy vào file debug.h của bạn
 
