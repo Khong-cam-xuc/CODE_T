@@ -27,7 +27,7 @@ vào chương trình cpp rồi sử dụng bình thường
 
 <img src="https://i.imgur.com/IbLsAQt.png">
 
-## Nguồn: 
-https://codeforces.com/blog/entry/99946
-https://codeforces.com/blog/entry/68809 
-https://codeforces.com/blog/entry/125435
+## Tham Khảo: 
+- https://codeforces.com/blog/entry/99946
+- https://codeforces.com/blog/entry/68809 
+- https://codeforces.com/blog/entry/125435
