@@ -4,7 +4,7 @@
 
 ### Bước 1:
 -Đầu tiên bạn cần phải bạn tạo file debug.h đặt ở folder bạn tự tạo vd:folder bug và bạn cần lưu lại đường dẫn của folder này
-<img src="https://up-anh.vi-vn.vn/img/1713850120_b70aa7a98dcc27cde4b156c33cc3bc58.">
+<img src="https://i.imgur.com/HPDkHvn.png">
 - Sao chép file debug.h trong github [Cài Đặt](https://github.com/Khong-cam-xuc/CODE_T/tree/main/C%C3%A0i%20%C4%90%E1%BA%B7t) rồi copy vào file debug.h của bạn
 ### Bước 2:
 - Bạn vào file 'sublime-build' của bạn
@@ -20,6 +20,6 @@
 #endif
 '''
 vào rồi sử dụng bình thường;
-<img src="https://up-anh.vi-vn.vn/img/1713850176_28dc8ccd9e6c51bc31110244e5ee5507.">
+<img src="https://i.imgur.com/IbLsAQt.png">
 ## Nguồn: 
 https://codeforces.com/blog/entry/99946 and https://codeforces.com/blog/entry/68809
