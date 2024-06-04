@@ -1,0 +1,52 @@
+/**
+ *    Author: Phan Duc Phuc
+ *    Created: 24.04.2024 11:36:17
+**/
+#include <bits/stdc++.h>
+//#pragma GCC target("popcnt,lzcnt,bmi,bmi2,abm")
+
+using namespace std;
+
+#ifdef Andrew
+#include "debug.h"
+#else
+#define debug(x...)
+#endif
+
+#define TIME (1.0 * clock()/ CLOCKS_PER_SEC)
+#define FOR(i,a,b) for(int i = (a);i <= (b);++i)
+#define FOD(i,b,a) for(int i = (b);i >= (a);--i)
+#define REP(i,a,b) for(int i = (a) ;i < (b);++i)
+#define file(NAME) if (fopen(NAME".inp","r")){ freopen(NAME".inp","r",stdin);freopen(NAME".out","w",stdout);}
+
+typedef pair<int,pair<int,int>> piii;
+
+bool cmp(piii &x,piii &y){
+	if (x.first != y.first){
+		return x.first < y.first;
+	}
+	if (x.second.first != y.second.first){
+		return x.second.first < y.second.first;
+	}
+	return x.second.second < y.second.second;
+}
+
+signed main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    file("/TASK");
+    int n;cin >> n;
+    vector<pair<int,pair<int,int>>> v;
+    for(int i = 1; i <= n;i++){
+    	int x,y,z;
+    	cin >> x >> y >> z;
+    	v.push_back({x,{y,z}});
+    }
+    sort(v.begin(),v.end(),cmp);
+    for(auto& [x,y]: v){
+    	cout << x << " " << y.first << " " << y.second << '\n';
+    }
+    return (0 ^ 0);
+}
+
+/**"Genius is 1% talent and 99% percent hard work"**/

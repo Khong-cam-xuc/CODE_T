@@ -1,0 +1,49 @@
+/**
+ *    Author: Andrew
+ *    Created: 30.05.2024 10:55:30
+**/
+#include <bits/stdc++.h>
+//#pragma GCC target("popcnt,lzcnt,bmi,bmi2,abm")
+
+using namespace std;
+
+#ifdef Andrew
+#include "debug.h"
+#else
+#define debug(x...) 44
+#endif
+
+#define TIME (1.0 * clock()/ CLOCKS_PER_SEC)
+#define FOR(i,a,b) for(int i = (a);i <= (b);++i)
+#define FOD(i,b,a) for(int i = (b);i >= (a);--i)
+#define REP(i,a,b) for(int i = (a) ;i < (b);++i)
+#define FILE(NAME) if (fopen(NAME".inp","r")){ freopen(NAME".inp","r",stdin);freopen(NAME".out","w",stdout);}
+#define ALL(x) ((x).first,(x).second)
+#define fi first
+#define se second
+
+typedef long long ll;
+typedef pair<int,int> pii;
+typedef vector<pair<int,int>> vii;
+typedef vector<vector<int>> vvi;
+
+const int N = 2 * 1e5;
+
+void solve(){
+	
+}
+
+signed main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    FILE("/TASK");
+    int TC;
+    //cin >> TC;
+    TC = 1;
+    while(TC--){
+    	solve();
+    }
+    return (0 ^ 0);
+}
+
+/**"Genius is 1% talent and 99% percent hard work"**/
